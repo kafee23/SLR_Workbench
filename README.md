@@ -2,7 +2,6 @@
 
 An offline, single-file workbench for conducting and reporting systematic literature reviews.
 
-[![CI](https://github.com/USERNAME/slr-workbench/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/slr-workbench/actions/workflows/ci.yml)
 [![Licence: MIT](https://img.shields.io/badge/licence-MIT-2a7f7f.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.0.0-c8a96e.svg)](CHANGELOG.md)
 [![Runs offline](https://img.shields.io/badge/runs-offline-4a7a5a.svg)](#privacy-and-where-your-data-lives)
