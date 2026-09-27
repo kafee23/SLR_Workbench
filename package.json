@@ -1,0 +1,44 @@
+{
+  "name": "slr-workbench",
+  "version": "2.0.0",
+  "description": "Offline, single-file workbench for conducting and reporting systematic literature reviews: import, deduplication, blinded dual-reviewer screening, kappa, PRISMA 2020 counts, flow diagram, checklist and audit log.",
+  "license": "MIT",
+  "author": "Abdullahi Chowdhury",
+  "homepage": "https://github.com/USERNAME/slr-workbench#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/USERNAME/slr-workbench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/USERNAME/slr-workbench/issues"
+  },
+  "keywords": [
+    "systematic-review",
+    "prisma",
+    "evidence-synthesis",
+    "deduplication",
+    "screening",
+    "cohens-kappa",
+    "research-software",
+    "offline-first"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "test": "npm run build && node test/selftest.js && node test/parsers.js && node test/workflow.js",
+    "test:selftest": "node test/selftest.js",
+    "test:parsers": "node test/parsers.js",
+    "test:workflow": "node test/workflow.js",
+    "bench": "node test/benchmark.js",
+    "screenshots": "node test/screenshots.js",
+    "figure": "node test/make_prisma_figure.js",
+    "examples": "node test/make_examples.js",
+    "check": "npm run build && git diff --exit-code -- index.html dist/"
+  },
+  "devDependencies": {
+    "playwright": "~1.56.0"
+  }
+}

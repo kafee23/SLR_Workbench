@@ -1,0 +1,37 @@
+# Citation metadata. GitHub reads this file and offers "Cite this repository"
+# in APA and BibTeX. Update version, date-released and doi with each release.
+# Validate at https://citation-file-format.github.io/cff-initializer-javascript/
+cff-version: 1.2.0
+message: "If you use the SLR Workbench in a review or a paper, please cite it using the metadata below, and cite the accompanying paper where a methods reference is appropriate."
+type: software
+title: "SLR Workbench"
+abstract: "An offline, single-file workbench for conducting and reporting systematic literature reviews: attributable multi-database import, blocked fuzzy deduplication with a bounded edit distance, blinded dual-reviewer screening with Cohen's and Fleiss' kappa, PRISMA 2020 counts with consistency checks, the two-arm flow diagram, the 27-item checklist and an append-only audit log."
+version: 2.0.0
+date-released: 2026-09-27
+license: MIT
+repository-code: "https://github.com/USERNAME/slr-workbench"
+url: "https://USERNAME.github.io/slr-workbench/"
+# doi: 10.5281/zenodo.0000000   # add the Zenodo concept DOI once a release is archived
+keywords:
+  - systematic review
+  - evidence synthesis
+  - PRISMA 2020
+  - deduplication
+  - screening
+  - inter-rater reliability
+  - research software
+authors:
+  - family-names: Chowdhury
+    given-names: Abdullahi
+    affiliation: "Adelaide University Online and Learning Futures, Adelaide University, Australia"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "Conducting a trustworthy systematic literature review: a practical guide and an open workbench"
+  authors:
+    - family-names: Chowdhury
+      given-names: Abdullahi
+  year: 2026
+  journal: "[journal to be added on publication]"
+  # volume, issue, start, end and doi to be added on publication
+  notes: "Manuscript describing the method and the tool; citation details will be completed when the article is published."

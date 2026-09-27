@@ -1,0 +1,616 @@
+<header class="site-header">
+  <div class="logo-group">
+    <div class="logo-badge">SLR</div>
+    <div style="min-width:0">
+      <div class="site-title" id="hdrProjectTitle">Untitled Review</div>
+      <div class="site-subtitle">Systematic Review Workbench &middot; v2.0</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <div class="save-chip" title="Autosave status"><span class="save-dot" id="saveDot"></span><span id="saveText">Ready</span></div>
+    <button class="btn btn-ghost btn-sm" onclick="UI.openProjectFile()">Open</button>
+    <button class="btn btn-gold btn-sm" onclick="Project.saveToFile()">Save .slrproj</button>
+  </div>
+</header>
+
+<nav class="tab-bar" id="tabBar">
+  <div class="tab active" data-tab="tab-project">Project</div>
+  <div class="tab" data-tab="tab-import">Import &amp; Deduplication <span class="tab-count" id="tc-import">0</span></div>
+  <div class="tab" data-tab="tab-screen">Screening <span class="tab-count" id="tc-screen">0</span></div>
+  <div class="tab" data-tab="tab-agree">Agreement <span class="tab-count" id="tc-agree">0</span></div>
+  <div class="tab" data-tab="tab-search">Search Record</div>
+  <div class="tab" data-tab="tab-data">PRISMA Data</div>
+  <div class="tab" data-tab="tab-diagram">Flow Diagram</div>
+  <div class="tab" data-tab="tab-analytics">Analytics</div>
+  <div class="tab" data-tab="tab-checklist">Checklist <span class="tab-count" id="tc-check">0</span></div>
+  <div class="tab" data-tab="tab-audit">Audit Log</div>
+</nav>
+
+<main class="main">
+
+<!-- ════════ PROJECT ════════ -->
+<section class="tab-panel active" id="tab-project">
+  <div class="section-header">
+    <h1 class="section-title">Project</h1>
+    <span class="section-tag">setup</span>
+    <p class="section-desc">Everything below is stored in this browser and travels with the .slrproj file.</p>
+  </div>
+
+  <div class="grid grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">Review details</h2></div>
+      <div class="card-body">
+        <div class="field">
+          <label class="fl" for="pjTitle">Review title</label>
+          <input type="text" id="pjTitle" placeholder="e.g. Machine learning for network intrusion detection: a systematic review">
+        </div>
+        <div class="inline-fields field">
+          <div>
+            <label class="fl" for="pjType">Review type</label>
+            <select id="pjType">
+              <option value="systematic">Systematic review</option>
+              <option value="scoping">Scoping review</option>
+              <option value="rapid">Rapid review</option>
+              <option value="umbrella">Umbrella review</option>
+              <option value="mixed">Mixed-methods review</option>
+              <option value="meta">Systematic review with meta-analysis</option>
+            </select>
+          </div>
+          <div>
+            <label class="fl" for="pjFramework">Question framework</label>
+            <select id="pjFramework">
+              <option value="PICO">PICO</option>
+              <option value="PECO">PECO</option>
+              <option value="PCC">PCC</option>
+              <option value="SPIDER">SPIDER</option>
+              <option value="PIRD">PIRD</option>
+              <option value="PICo">PICo</option>
+              <option value="none">Not applicable</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="fl" for="pjQuestion">Review question</label>
+          <textarea id="pjQuestion" placeholder="State the question the review answers."></textarea>
+        </div>
+        <div class="inline-fields field">
+          <div>
+            <label class="fl" for="pjReg">Registration (PROSPERO / OSF / other)</label>
+            <input type="text" id="pjReg" placeholder="CRD42026000000">
+          </div>
+          <div>
+            <label class="fl" for="pjSearchDate">Date of last search</label>
+            <input type="date" id="pjSearchDate">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Reviewers</h2>
+        <button class="btn btn-teal btn-sm" onclick="Reviewers.add()">Add reviewer</button>
+      </div>
+      <div class="card-body">
+        <div id="reviewerList"></div>
+        <div class="divider"></div>
+        <div class="field">
+          <label class="fl" for="activeReviewer">Screening as</label>
+          <select id="activeReviewer" onchange="Reviewers.setActive(this.value)"></select>
+          <p class="hint">Decisions you record on the Screening tab are attributed to this reviewer.</p>
+        </div>
+        <label class="switch" style="margin-top:6px">
+          <input type="checkbox" id="blindedMode" onchange="Reviewers.setBlinded(this.checked)">
+          <span>Blinded screening &mdash; hide other reviewers' decisions until you have recorded your own</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">Project file</h2></div>
+      <div class="card-body">
+        <p class="card-note" style="margin-top:0;margin-bottom:12px">Work autosaves to this browser continuously. Export a <span class="mono">.slrproj</span> file to move the review between machines, archive a milestone, or hand it to a co-reviewer.</p>
+        <div class="btn-row">
+          <button class="btn btn-gold" onclick="Project.saveToFile()">Save .slrproj</button>
+          <button class="btn btn-ghost-ink" onclick="UI.openProjectFile()">Open .slrproj</button>
+          <button class="btn btn-ghost-ink" onclick="Project.mergeFromFile()">Merge co-reviewer file</button>
+          <button class="btn btn-coral" onclick="Project.resetAll()">New empty project</button>
+        </div>
+        <input type="file" id="projFileInput" accept=".slrproj,.json" style="display:none">
+        <input type="file" id="mergeFileInput" accept=".slrproj,.json" style="display:none">
+        <div class="divider"></div>
+        <div class="grid grid-3" style="gap:10px">
+          <div><div class="stat-label">Records</div><div class="mono" id="pjStatRecords">0</div></div>
+          <div><div class="stat-label">Schema</div><div class="mono" id="pjStatSchema">2</div></div>
+          <div><div class="stat-label">Last saved</div><div class="mono" id="pjStatSaved">never</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">Storage</h2></div>
+      <div class="card-body">
+        <div id="storageStatus" class="callout" style="margin-bottom:12px">Checking storage&hellip;</div>
+        <label class="switch"><input type="checkbox" id="autosaveToggle" checked onchange="Store.setAutosave(this.checked)"><span>Autosave to this browser</span></label>
+        <p class="hint">Browser storage is per-device and per-browser. It is a convenience, not a backup. Keep a <span class="mono">.slrproj</span> file for anything you cannot afford to lose.</p>
+        <div class="divider"></div>
+        <div class="btn-row">
+          <button class="btn btn-ghost-ink btn-sm" onclick="Store.saveNow()">Save to browser now</button>
+          <button class="btn btn-ghost-ink btn-sm" onclick="Store.clearBrowser()">Clear browser copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ IMPORT ════════ -->
+<section class="tab-panel" id="tab-import">
+  <div class="section-header">
+    <h1 class="section-title">Import &amp; Deduplication</h1>
+    <span class="section-tag">stage 1</span>
+    <p class="section-desc">Load exports from each database separately so the identification counts stay attributable.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-body">
+      <div class="dropzone" id="dropzone">
+        <div class="dropzone-icon">&#8681;</div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:15px;margin-bottom:3px">Drop citation files here, or click to browse</div>
+        <div class="muted" style="font-size:12.5px">RIS &middot; BibTeX &middot; NBIB/MEDLINE &middot; CSV &middot; TSV &mdash; one export per database</div>
+      </div>
+      <input type="file" id="fileInput" multiple accept=".ris,.txt,.bib,.bibtex,.nbib,.csv,.tsv" style="display:none">
+      <div class="btn-row" style="margin-top:12px">
+        <button class="btn btn-ghost-ink btn-sm" onclick="Import.loadSample()">Load 400-record sample</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Import.downloadTemplate('csv')">CSV template</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Import.downloadTemplate('ris')">RIS template</button>
+      </div>
+      <div id="importLog" style="margin-top:14px"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px" id="dupCard">
+    <div class="card-header">
+      <h2 class="card-title">Duplicate detection</h2>
+      <div class="btn-row">
+        <button class="btn btn-teal btn-sm" id="runDedupBtn" onclick="Dedup.run()">Run detection</button>
+        <button class="btn btn-coral btn-sm" id="cancelDedupBtn" style="display:none" onclick="Dedup.cancel()">Cancel</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="inline-fields">
+        <div>
+          <label class="fl" for="dupStrategy">Matching strategy</label>
+          <select id="dupStrategy">
+            <option value="hybrid">DOI, then blocked fuzzy title (recommended)</option>
+            <option value="doi">DOI exact match only</option>
+            <option value="title">Blocked fuzzy title only</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" for="dupThreshold">Title similarity threshold <span class="mono" id="dupThreshVal">88%</span></label>
+          <input type="range" id="dupThreshold" min="70" max="100" value="88" style="width:100%" oninput="document.getElementById('dupThreshVal').textContent=this.value+'%'">
+        </div>
+        <div>
+          <label class="fl" for="dupYearGuard">Year tolerance</label>
+          <select id="dupYearGuard">
+            <option value="1">&plusmn;1 year (recommended)</option>
+            <option value="0">Exact year only</option>
+            <option value="99">Ignore year</option>
+          </select>
+        </div>
+      </div>
+      <div id="dedupProgressWrap" style="margin-top:14px;display:none">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px">
+          <span id="dedupProgressLabel" class="mono" style="font-size:11.5px;color:rgba(10,10,20,.55)"></span>
+          <span id="dedupProgressPct" style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--teal);margin-left:auto"></span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="dedupProgressFill" style="width:0%"></div></div>
+      </div>
+      <div id="dupSummary" class="callout" style="margin-top:14px;display:none"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:16px" id="importStats"></div>
+
+  <div class="card" id="recordTableCard" style="display:none">
+    <div class="card-header">
+      <h2 class="card-title">Records</h2>
+      <div class="btn-row">
+        <input type="search" id="recSearch" placeholder="Search title, author, DOI&hellip;" style="width:230px;padding:5px 10px;font-size:12px">
+        <select id="recFilter" style="width:auto;padding:5px 10px;font-size:12px">
+          <option value="all">All records</option>
+          <option value="dup">Flagged duplicates</option>
+          <option value="unique">Unique records</option>
+        </select>
+        <select id="recSourceFilter" style="width:auto;padding:5px 10px;font-size:12px"><option value="all">All sources</option></select>
+        <button class="btn btn-coral btn-sm" onclick="Records.removeFlaggedDuplicates()">Remove flagged duplicates</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Exports.recordsCSV()">Export CSV</button>
+      </div>
+    </div>
+    <div class="card-body tight">
+      <div class="table-wrap" id="recScroll" style="max-height:620px">
+        <table>
+          <thead><tr>
+            <th style="width:34px"></th><th>Title</th><th style="width:120px">Authors</th>
+            <th class="num" style="width:58px">Year</th><th style="width:130px">Source</th>
+            <th style="width:96px">Status</th>
+          </tr></thead>
+          <tbody id="recBody"></tbody>
+        </table>
+      </div>
+      <div style="padding:9px 14px;border-top:1px solid var(--border);font-size:11.5px" class="muted mono" id="recFooter"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SCREENING ════════ -->
+<section class="tab-panel" id="tab-screen">
+  <div class="section-header">
+    <h1 class="section-title">Screening</h1>
+    <span class="section-tag">stage 2</span>
+    <p class="section-desc">Each reviewer records decisions independently; agreement is computed on the next tab.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-body">
+      <div class="inline-fields">
+        <div>
+          <label class="fl" for="screenStage">Stage</label>
+          <select id="screenStage" onchange="Screen.setStage(this.value)">
+            <option value="title">Title screening</option>
+            <option value="abstract">Abstract screening</option>
+            <option value="fulltext">Full-text eligibility</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" for="screenShow">Show</label>
+          <select id="screenShow" onchange="Screen.render()">
+            <option value="todo">Awaiting my decision</option>
+            <option value="all">All eligible records</option>
+            <option value="mine">Decided by me</option>
+            <option value="conflict">In conflict</option>
+            <option value="include">Resolved include</option>
+            <option value="exclude">Resolved exclude</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" for="screenSearch">Search</label>
+          <input type="search" id="screenSearch" placeholder="Filter by title or keyword&hellip;">
+        </div>
+        <div style="flex:0 0 auto">
+          <label class="fl">&nbsp;</label>
+          <div class="rev-chip" id="screenAsChip">&mdash;</div>
+        </div>
+      </div>
+      <div class="callout warn" id="screenGate" style="margin-top:12px;display:none"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:16px" id="screenStats"></div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title" id="screenTableTitle">Records</h2>
+      <div class="btn-row">
+        <span class="mono muted" style="font-size:11.5px" id="screenProgressText"></span>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Screen.exportDecisions()">Export decisions</button>
+      </div>
+    </div>
+    <div class="card-body tight">
+      <div class="table-wrap" id="screenScroll" style="max-height:660px">
+        <table>
+          <thead><tr>
+            <th>Record</th><th style="width:118px">Other reviewers</th>
+            <th style="width:196px">My decision</th><th style="width:150px">Exclusion reason</th>
+          </tr></thead>
+          <tbody id="screenBody"></tbody>
+        </table>
+      </div>
+      <div style="padding:9px 14px;border-top:1px solid var(--border);font-size:11.5px" class="muted mono" id="screenFooter"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ AGREEMENT ════════ -->
+<section class="tab-panel" id="tab-agree">
+  <div class="section-header">
+    <h1 class="section-title">Agreement &amp; Conflicts</h1>
+    <span class="section-tag">stage 2b</span>
+    <p class="section-desc">Kappa is computed only over records both reviewers have actually decided.</p>
+  </div>
+
+  <div class="grid grid-3" style="margin-bottom:16px" id="agreeCards"></div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-header">
+      <h2 class="card-title">Inter-rater reliability</h2>
+      <select id="agreeStage" onchange="Agreement.render()" style="width:auto;padding:5px 10px;font-size:12px">
+        <option value="title">Title screening</option>
+        <option value="abstract">Abstract screening</option>
+        <option value="fulltext">Full-text eligibility</option>
+      </select>
+    </div>
+    <div class="card-body" id="agreeDetail"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Conflict queue</h2>
+      <div class="btn-row">
+        <span class="mono muted" style="font-size:11.5px" id="conflictCount"></span>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Agreement.exportConflicts()">Export conflicts</button>
+      </div>
+    </div>
+    <div class="card-body tight">
+      <div class="table-wrap" style="max-height:560px">
+        <table>
+          <thead><tr><th>Record</th><th style="width:210px">Decisions</th><th style="width:230px">Resolve as</th></tr></thead>
+          <tbody id="conflictBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SEARCH RECORD ════════ -->
+<section class="tab-panel" id="tab-search">
+  <div class="section-header">
+    <h1 class="section-title">Search Record</h1>
+    <span class="section-tag">PRISMA-S</span>
+    <p class="section-desc">The reproducible record of what was searched, when, and with which string.</p>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Database searches</h2>
+      <div class="btn-row">
+        <button class="btn btn-teal btn-sm" onclick="SearchRec.add()">Add row</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="SearchRec.export('csv')">CSV</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="SearchRec.export('latex')">LaTeX</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="SearchRec.export('md')">Markdown</button>
+      </div>
+    </div>
+    <div class="card-body tight">
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th style="width:135px">Database</th><th>Search string</th><th style="width:120px">Filters / limits</th>
+            <th style="width:112px">Date searched</th><th class="num" style="width:82px">Retrieved</th>
+            <th class="num" style="width:76px">Screened</th><th style="width:40px"></th>
+          </tr></thead>
+          <tbody id="searchBody"></tbody>
+          <tfoot><tr style="background:var(--paper2);font-weight:600">
+            <td colspan="4" style="text-align:right;padding:9px 11px">Total</td>
+            <td class="num" id="srTotalRetrieved">0</td><td class="num" id="srTotalSelected">0</td><td></td>
+          </tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="callout gold" style="margin-top:14px">Counts here are your record of what each database returned. The Identification figures on the PRISMA Data tab are taken from the files you actually imported, so the two will differ if an export was truncated. That difference is worth reconciling before submission.</div>
+</section>
+
+<!-- ════════ PRISMA DATA ════════ -->
+<section class="tab-panel" id="tab-data">
+  <div class="section-header">
+    <h1 class="section-title">PRISMA Data</h1>
+    <span class="section-tag">stage 3</span>
+    <p class="section-desc">Figures derive from your records; any field can be overridden and the override is logged.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-body" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <button class="btn btn-teal" onclick="Prisma.autoFill()">Recalculate from records</button>
+      <button class="btn btn-ghost-ink" onclick="Prisma.clearOverrides()">Clear all overrides</button>
+      <label class="switch" style="margin-left:auto"><input type="checkbox" id="showOtherArm" onchange="Prisma.toggleOtherArm(this.checked)"><span>Include the &ldquo;other methods&rdquo; arm (citation searching, websites, organisations)</span></label>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Identification &mdash; databases &amp; registers</h2>
+        <button class="btn btn-teal btn-xs" onclick="Prisma.addSource()">Add source</button>
+      </div>
+      <div class="card-body">
+        <div id="sourceRows"></div>
+        <div class="divider"></div>
+        <div class="inline-fields">
+          <div><label class="fl">Duplicate records removed</label><input type="number" min="0" id="n-dup" data-prisma="dupRemoved"></div>
+          <div><label class="fl">Removed by automation tools</label><input type="number" min="0" id="n-auto" data-prisma="autoRemoved"></div>
+          <div><label class="fl">Removed for other reasons</label><input type="number" min="0" id="n-other" data-prisma="otherRemoved"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">Screening &amp; eligibility</h2></div>
+      <div class="card-body">
+        <div class="inline-fields field">
+          <div><label class="fl">Records screened</label><input type="number" min="0" id="n-screened" data-prisma="screened"></div>
+          <div><label class="fl">Records excluded</label><input type="number" min="0" id="n-screen-excl" data-prisma="screenExcluded"></div>
+        </div>
+        <div class="inline-fields field">
+          <div><label class="fl">Reports sought for retrieval</label><input type="number" min="0" id="n-sought" data-prisma="sought"></div>
+          <div><label class="fl">Reports not retrieved</label><input type="number" min="0" id="n-notret" data-prisma="notRetrieved"></div>
+        </div>
+        <div class="inline-fields field">
+          <div><label class="fl">Reports assessed for eligibility</label><input type="number" min="0" id="n-assessed" data-prisma="assessed"></div>
+          <div><label class="fl">Reports excluded (total)</label><input type="number" min="0" id="n-fulltext-excl" data-prisma="fulltextExcluded"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="inline-fields">
+          <div><label class="fl">Studies included in review</label><input type="number" min="0" id="n-studies" data-prisma="studies"></div>
+          <div><label class="fl">Reports of included studies</label><input type="number" min="0" id="n-reports" data-prisma="reports"></div>
+        </div>
+        <p class="hint">A study is the unit of research; a report is a paper describing it. Two papers on one trial are two reports of one study.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Full-text exclusion reasons</h2>
+        <button class="btn btn-teal btn-xs" onclick="Prisma.addReason()">Add reason</button>
+      </div>
+      <div class="card-body">
+        <div id="reasonRows"></div>
+        <div id="reasonWarn" class="callout warn" style="margin-top:12px;display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" id="otherArmCard" style="display:none">
+      <div class="card-header">
+        <h2 class="card-title">Identification &mdash; other methods</h2>
+        <button class="btn btn-teal btn-xs" onclick="Prisma.addOtherSource()">Add source</button>
+      </div>
+      <div class="card-body">
+        <div id="otherSourceRows"></div>
+        <div class="divider"></div>
+        <div class="inline-fields field">
+          <div><label class="fl">Reports sought for retrieval</label><input type="number" min="0" id="o-sought" data-prisma="oSought"></div>
+          <div><label class="fl">Reports not retrieved</label><input type="number" min="0" id="o-notret" data-prisma="oNotRetrieved"></div>
+        </div>
+        <div class="inline-fields">
+          <div><label class="fl">Reports assessed for eligibility</label><input type="number" min="0" id="o-assessed" data-prisma="oAssessed"></div>
+          <div><label class="fl">Reports excluded</label><input type="number" min="0" id="o-excluded" data-prisma="oExcluded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="prismaChecks" style="margin-top:16px"></div>
+</section>
+
+<!-- ════════ DIAGRAM ════════ -->
+<section class="tab-panel" id="tab-diagram">
+  <div class="section-header">
+    <h1 class="section-title">Flow Diagram</h1>
+    <span class="section-tag">PRISMA 2020</span>
+    <p class="section-desc">Redrawn from the PRISMA Data tab every time you open this view.</p>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">PRISMA 2020 flow diagram</h2>
+      <div class="btn-row">
+        <select id="diagramType" onchange="Diagram.render()" style="width:auto;padding:5px 10px;font-size:12px" title="Larger type stays legible when the diagram is reduced to a journal page">
+          <option value="1">Screen type</option>
+          <option value="1.4">Print type (larger)</option>
+        </select>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Diagram.render()">Refresh</button>
+        <button class="btn btn-teal btn-sm" onclick="Diagram.exportSVG()">SVG</button>
+        <button class="btn btn-teal btn-sm" onclick="Diagram.exportPNG(3)">PNG &times;3</button>
+        <button class="btn btn-ghost-ink btn-sm" onclick="window.print()">Print</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="diagramWrap"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ANALYTICS ════════ -->
+<section class="tab-panel" id="tab-analytics">
+  <div class="section-header">
+    <h1 class="section-title">Analytics</h1>
+    <span class="section-tag">descriptive</span>
+    <p class="section-desc">Vector charts drawn locally, so they work offline and export at any size.</p>
+  </div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-body" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <label class="fl" style="margin:0">Population</label>
+      <select id="anScope" onchange="Analytics.render()" style="width:auto;padding:6px 11px;font-size:12.5px">
+        <option value="unique">Unique records (duplicates removed)</option>
+        <option value="all">All imported records</option>
+        <option value="included">Included studies only</option>
+      </select>
+      <button class="btn btn-ghost-ink btn-sm" style="margin-left:auto" onclick="Analytics.render()">Refresh</button>
+    </div>
+  </div>
+  <div class="grid grid-2" id="analyticsGrid"></div>
+</section>
+
+<!-- ════════ CHECKLIST ════════ -->
+<section class="tab-panel" id="tab-checklist">
+  <div class="section-header">
+    <h1 class="section-title">Reporting Checklist</h1>
+    <span class="section-tag">PRISMA 2020</span>
+    <p class="section-desc">All 27 items with their sub-items, each with a place to record where it is reported.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-body">
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+        <div style="flex:1;min-width:220px">
+          <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">
+            <span class="mono muted" id="checkProgressLabel">0 of 0 items reported</span>
+            <span style="font-family:var(--font-display);font-weight:700;color:var(--teal)" id="checkProgressPct">0%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="checkProgressFill" style="width:0%"></div></div>
+        </div>
+        <div class="btn-row">
+          <select id="checkFilter" onchange="Checklist.render()" style="width:auto;padding:5px 10px;font-size:12px">
+            <option value="all">All items</option>
+            <option value="todo">Not yet reported</option>
+            <option value="done">Reported</option>
+            <option value="na">Not applicable</option>
+          </select>
+          <button class="btn btn-ghost-ink btn-sm" onclick="Checklist.export('csv')">CSV</button>
+          <button class="btn btn-ghost-ink btn-sm" onclick="Checklist.export('docx')">Word table</button>
+          <button class="btn btn-ghost-ink btn-sm" onclick="Checklist.reset()">Reset</button>
+        </div>
+      </div>
+      <p class="hint" style="margin:0">Where an item does not apply to your review type, mark it <span class="mono">n/a</span> and say why. Journals accept a justified n/a; they do not accept a blank.</p>
+    </div>
+  </div>
+
+  <div id="checklistHost"></div>
+</section>
+
+<!-- ════════ AUDIT ════════ -->
+<section class="tab-panel" id="tab-audit">
+  <div class="section-header">
+    <h1 class="section-title">Audit Log</h1>
+    <span class="section-tag">provenance</span>
+    <p class="section-desc">An append-only record of every change, for the methods section and for reproducibility.</p>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Activity</h2>
+      <div class="btn-row">
+        <select id="auditFilter" onchange="Audit.render()" style="width:auto;padding:5px 10px;font-size:12px">
+          <option value="all">All activity</option>
+          <option value="import">Import</option>
+          <option value="dedup">Deduplication</option>
+          <option value="screen">Screening</option>
+          <option value="resolve">Conflict resolution</option>
+          <option value="prisma">PRISMA data</option>
+          <option value="project">Project</option>
+        </select>
+        <button class="btn btn-ghost-ink btn-sm" onclick="Audit.export()">Export CSV</button>
+      </div>
+    </div>
+    <div class="card-body tight">
+      <div class="table-wrap" style="max-height:660px">
+        <table>
+          <thead><tr>
+            <th style="width:154px">When</th><th style="width:100px">Actor</th>
+            <th style="width:112px">Action</th><th>Detail</th>
+          </tr></thead>
+          <tbody id="auditBody"></tbody>
+        </table>
+      </div>
+      <div style="padding:9px 14px;border-top:1px solid var(--border);font-size:11.5px" class="muted mono" id="auditFooter"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="modal-back" id="modalBack"><div class="modal" id="modalBox">
+  <div class="modal-header"><h3 class="modal-title" id="modalTitle"></h3><button class="x-btn" onclick="UI.closeModal()">&times;</button></div>
+  <div class="modal-body" id="modalBody"></div>
+  <div class="modal-footer" id="modalFooter"></div>
+</div></div>
+
+<div id="toastHost"></div>

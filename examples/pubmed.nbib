@@ -1,0 +1,54 @@
+PMID- 90000001
+OWN - NLM
+STAT- MEDLINE
+TI  - Machine learning for sepsis prediction in intensive care: a
+      systematic review.
+AU  - Specimen E
+AU  - Demo G
+DP  - 2024 Mar 15
+JT  - Journal of Example Medical Informatics
+VI  - 26
+IP  - 3
+PG  - e45678
+AB  - Background: Sepsis remains a leading cause of mortality in intensive care.
+      Methods: We searched five databases to December 2023 and appraised included
+      studies with PROBAST. Results: 41 studies met the criteria.
+MH  - Sepsis/diagnosis
+MH  - Machine Learning
+PT  - Systematic Review
+AID - 10.1000/nbib.0001 [doi]
+
+PMID- 90000002
+TI  - Adversarial robustness of intrusion detection models under distribution shift.
+AU  - Example A
+AU  - Sample B
+DP  - 2024
+JT  - Journal of Example Security
+VI  - 140
+IP  - 2
+PG  - 101-118
+AID - 10.1000/example.0001 [doi]
+PT  - Journal Article
+
+PMID- 90000003
+TI  - Federated learning in hospital networks: privacy, utility and governance.
+AU  - Dummy I
+AU  - Stub H
+DP  - 2023 Nov
+JT  - Example Digital Medicine
+VI  - 6
+PG  - 199
+AB  - A narrative overview of federated learning deployments across twelve hospital networks.
+AID - 10.1000/nbib.0003 [doi]
+PT  - Review
+
+PMID- 90000004
+TI  - Digital identity verification for telehealth: a mixed-methods evaluation.
+AU  - Mockup F
+DP  - 2022 Jun 02
+JT  - Journal of Example Medical Informatics
+VI  - 24
+IP  - 6
+PG  - e31111
+AID - 10.1000/nbib.0004 [doi]
+PT  - Journal Article

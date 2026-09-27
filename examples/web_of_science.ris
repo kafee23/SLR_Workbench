@@ -1,0 +1,87 @@
+TY  - JOUR
+AU  - Example, Alice
+AU  - Sample, Bao
+TI  - Adversarial robustness of intrusion detection models
+     under distribution shift
+PY  - 2024
+JO  - Journal of Example Security
+VL  - 140
+IS  - 2
+SP  - 101
+EP  - 118
+DO  - https://doi.org/10.1000/EXAMPLE.0001
+AB  - This paper studies the robustness of learned intrusion detectors when the
+      traffic distribution drifts after deployment. We evaluate several defences
+      on three public benchmarks.
+KW  - adversarial machine learning
+KW  - intrusion detection
+ER  - 
+
+TY  - JOUR
+AU  - Placeholder, Chen
+TI  - Federated learning for anomaly detection in industrial control systems: a comparative study
+PY  - 2023
+JO  - Transactions on Example Systems
+VL  - 18
+IS  - 4
+SP  - 455
+EP  - 471
+DO  - 10.1000/example.0002
+AB  - We compare federated and centralised training for anomaly detection on programmable logic controller telemetry.
+KW  - federated learning
+KW  - anomaly detection
+ER  - 
+
+TY  - CONF
+AU  - Fictional, Dana
+AU  - Specimen, Eli
+TI  - Zero trust architectures for critical infrastructure: lessons from deployment
+PY  - 2023
+T2  - Proceedings of the Example Conference on Computer Security
+SP  - 12
+EP  - 24
+DO  - 10.1000/example.0003
+KW  - zero trust
+ER  - 
+
+TY  - JOUR
+AU  - Sample, Bao
+TI  - Explainable artificial intelligence for security operations: a scoping review
+PY  - 2022
+JO  - Example Computing Surveys
+VL  - 55
+IS  - 7
+SP  - 1
+EP  - 36
+DO  - 10.1000/example.0004
+AB  - A scoping review of explanation methods applied to security analytics, mapping 112 studies by technique and evaluation approach.
+KW  - explainable AI
+KW  - scoping review
+ER  - 
+
+TY  - JOUR
+AU  - Mockup, Farah
+TI  - Graph neural networks for lateral movement detection in enterprise networks
+PY  - 2024
+JO  - Journal of Example Security
+VL  - 141
+IS  - 1
+SP  - 33
+EP  - 49
+DO  - 10.1000/example.0005
+KW  - graph neural networks
+ER  - 
+
+TY  - JOUR
+AU  - Demo, Gabriel
+AU  - Example, Alice
+TI  - Privacy preserving analytics at the network edge under resource constraints
+PY  - 2021
+JO  - Transactions on Example Systems
+VL  - 16
+IS  - 3
+SP  - 210
+EP  - 226
+DO  - 10.1000/example.0006
+KW  - differential privacy
+ER  - 

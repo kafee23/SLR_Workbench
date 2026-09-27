@@ -1,0 +1,1572 @@
+{
+ "schemaVersion": 2,
+ "appVersion": "2.0.0",
+ "project": {
+  "id": "pj_mujvahi9_4",
+  "title": "Learning-based intrusion detection under distribution shift: a systematic review",
+  "reviewType": "systematic",
+  "framework": "PICO",
+  "question": "How robust are learning-based network intrusion detection systems to distribution shift and adversarial perturbation under realistic deployment conditions?",
+  "registration": "OSF: osf.io/example",
+  "lastSearchDate": "2026-09-15",
+  "created": "2026-09-27T13:41:34.881Z",
+  "modified": "2026-09-27T13:41:34.890Z"
+ },
+ "reviewers": [
+  {
+   "id": "rev_a",
+   "name": "Reviewer A",
+   "initials": "RA",
+   "colour": "#2a7f7f"
+  },
+  {
+   "id": "rev_b",
+   "name": "Reviewer B",
+   "initials": "RB",
+   "colour": "#c8a96e"
+  }
+ ],
+ "activeReviewerId": "rev_a",
+ "blinded": true,
+ "records": [
+  {
+   "id": "rec_mujvahi9_6",
+   "title": "Adversarial robustness of intrusion detection models under distribution shift",
+   "authors": "Example, Alice; Sample, Bao",
+   "year": "2024",
+   "journal": "Journal of Example Security",
+   "doi": "10.1000/example.0001",
+   "abstract": "This paper studies the robustness of learned intrusion detectors when the traffic distribution drifts after deployment. We evaluate several defences on three public benchmarks.",
+   "keywords": "adversarial machine learning; intrusion detection",
+   "volume": "140",
+   "issue": "2",
+   "pages": "101-118",
+   "publisher": "",
+   "url": "",
+   "type": "JOUR",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 1,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "include"
+    },
+    "abstract": {
+     "rev_a": "include"
+    },
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahia_7",
+   "title": "Federated learning for anomaly detection in industrial control systems: a comparative study",
+   "authors": "Placeholder, Chen",
+   "year": "2023",
+   "journal": "Transactions on Example Systems",
+   "doi": "10.1000/example.0002",
+   "abstract": "We compare federated and centralised training for anomaly detection on programmable logic controller telemetry.",
+   "keywords": "federated learning; anomaly detection",
+   "volume": "18",
+   "issue": "4",
+   "pages": "455-471",
+   "publisher": "",
+   "url": "",
+   "type": "JOUR",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 2,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "exclude"
+    },
+    "abstract": {
+     "rev_a": "include"
+    },
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": "include",
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahia_8",
+   "title": "Zero trust architectures for critical infrastructure: lessons from deployment",
+   "authors": "Fictional, Dana; Specimen, Eli",
+   "year": "2023",
+   "journal": "Proceedings of the Example Conference on Computer Security",
+   "doi": "10.1000/example.0003",
+   "abstract": "",
+   "keywords": "zero trust",
+   "volume": "",
+   "issue": "",
+   "pages": "12-24",
+   "publisher": "",
+   "url": "",
+   "type": "CONF",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 3,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "include"
+    },
+    "abstract": {
+     "rev_a": "include"
+    },
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahia_9",
+   "title": "Explainable artificial intelligence for security operations: a scoping review",
+   "authors": "Sample, Bao",
+   "year": "2022",
+   "journal": "Example Computing Surveys",
+   "doi": "10.1000/example.0004",
+   "abstract": "A scoping review of explanation methods applied to security analytics, mapping 112 studies by technique and evaluation approach.",
+   "keywords": "explainable AI; scoping review",
+   "volume": "55",
+   "issue": "7",
+   "pages": "1-36",
+   "publisher": "",
+   "url": "",
+   "type": "JOUR",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 4,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahia_a",
+   "title": "Graph neural networks for lateral movement detection in enterprise networks",
+   "authors": "Mockup, Farah",
+   "year": "2024",
+   "journal": "Journal of Example Security",
+   "doi": "10.1000/example.0005",
+   "abstract": "",
+   "keywords": "graph neural networks",
+   "volume": "141",
+   "issue": "1",
+   "pages": "33-49",
+   "publisher": "",
+   "url": "",
+   "type": "JOUR",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 5,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahia_b",
+   "title": "Privacy preserving analytics at the network edge under resource constraints",
+   "authors": "Demo, Gabriel; Example, Alice",
+   "year": "2021",
+   "journal": "Transactions on Example Systems",
+   "doi": "10.1000/example.0006",
+   "abstract": "",
+   "keywords": "differential privacy",
+   "volume": "16",
+   "issue": "3",
+   "pages": "210-226",
+   "publisher": "",
+   "url": "",
+   "type": "JOUR",
+   "dbSource": "Web of Science",
+   "importBatch": "batch_mujvahi9_5",
+   "importedAt": "2026-09-27T13:41:34.882Z",
+   "isDuplicate": false,
+   "dupGroup": 6,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahib_f",
+   "title": "Adversarial robustness of intrusion detection models under distribution shift",
+   "authors": "Example, Alice; Sample, Bao",
+   "year": "2024",
+   "journal": "Journal of Example Security",
+   "doi": "10.1000/example.0001",
+   "abstract": "",
+   "keywords": "adversarial machine learning, intrusion detection",
+   "volume": "140",
+   "issue": "2",
+   "pages": "101-118",
+   "publisher": "",
+   "url": "",
+   "type": "article",
+   "dbSource": "IEEE Xplore",
+   "importBatch": "batch_mujvahib_e",
+   "importedAt": "2026-09-27T13:41:34.883Z",
+   "isDuplicate": true,
+   "dupGroup": 1,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahib_g",
+   "title": "Zero trust architectures for critical infrastructure: lessons from deployment",
+   "authors": "Fictional, Dana; Specimen, Eli",
+   "year": "2023",
+   "journal": "Proceedings of the Example Conference on Computer Security",
+   "doi": "10.1000/example.0003",
+   "abstract": "",
+   "keywords": "",
+   "volume": "",
+   "issue": "",
+   "pages": "12-24",
+   "publisher": "",
+   "url": "",
+   "type": "inproceedings",
+   "dbSource": "IEEE Xplore",
+   "importBatch": "batch_mujvahib_e",
+   "importedAt": "2026-09-27T13:41:34.883Z",
+   "isDuplicate": true,
+   "dupGroup": 3,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahib_h",
+   "title": "Side channel analysis of TLS implementations on constrained devices",
+   "authors": "Stub, Hana; Placeholder, Chen",
+   "year": "2024",
+   "journal": "Example Letters on Embedded Security",
+   "doi": "10.1000/example.0007",
+   "abstract": "We measure timing leakage in four TLS libraries compiled for microcontrollers.",
+   "keywords": "",
+   "volume": "9",
+   "issue": "1",
+   "pages": "5-11",
+   "publisher": "",
+   "url": "",
+   "type": "article",
+   "dbSource": "IEEE Xplore",
+   "importBatch": "batch_mujvahib_e",
+   "importedAt": "2026-09-27T13:41:34.883Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahib_i",
+   "title": "Threat intelligence sharing across federated hospitals: a design framework",
+   "authors": "Dummy, Ivo",
+   "year": "2022",
+   "journal": "Journal of Example Health Informatics",
+   "doi": "10.1000/example.0008",
+   "abstract": "",
+   "keywords": "",
+   "volume": "30",
+   "issue": "5",
+   "pages": "801-815",
+   "publisher": "",
+   "url": "",
+   "type": "article",
+   "dbSource": "IEEE Xplore",
+   "importBatch": "batch_mujvahib_e",
+   "importedAt": "2026-09-27T13:41:34.883Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahib_j",
+   "title": "Graph neural networks for lateral movement detection in enterprise networks",
+   "authors": "Mockup, Farah",
+   "year": "2023",
+   "journal": "Proceedings of the Example Workshop on Network Defence",
+   "doi": "",
+   "abstract": "",
+   "keywords": "",
+   "volume": "",
+   "issue": "",
+   "pages": "77-84",
+   "publisher": "",
+   "url": "",
+   "type": "inproceedings",
+   "dbSource": "IEEE Xplore",
+   "importBatch": "batch_mujvahib_e",
+   "importedAt": "2026-09-27T13:41:34.883Z",
+   "isDuplicate": true,
+   "dupGroup": 5,
+   "dupScore": 100,
+   "dupMethod": "title",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_n",
+   "title": "Machine learning for sepsis prediction in intensive care: a systematic review",
+   "authors": "Specimen E; Demo G",
+   "year": "2024",
+   "journal": "Journal of Example Medical Informatics",
+   "doi": "10.1000/nbib.0001",
+   "abstract": "Background: Sepsis remains a leading cause of mortality in intensive care. Methods: We searched five databases to December 2023 and appraised included studies with PROBAST. Results: 41 studies met the criteria.",
+   "keywords": "Sepsis/diagnosis; Machine Learning",
+   "volume": "26",
+   "issue": "3",
+   "pages": "e45678",
+   "publisher": "",
+   "url": "",
+   "type": "Systematic Review",
+   "dbSource": "PubMed",
+   "importBatch": "batch_mujvahic_m",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_o",
+   "title": "Adversarial robustness of intrusion detection models under distribution shift",
+   "authors": "Example A; Sample B",
+   "year": "2024",
+   "journal": "Journal of Example Security",
+   "doi": "10.1000/example.0001",
+   "abstract": "",
+   "keywords": "",
+   "volume": "140",
+   "issue": "2",
+   "pages": "101-118",
+   "publisher": "",
+   "url": "",
+   "type": "Journal Article",
+   "dbSource": "PubMed",
+   "importBatch": "batch_mujvahic_m",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": true,
+   "dupGroup": 1,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_p",
+   "title": "Federated learning in hospital networks: privacy, utility and governance",
+   "authors": "Dummy I; Stub H",
+   "year": "2023",
+   "journal": "Example Digital Medicine",
+   "doi": "10.1000/nbib.0003",
+   "abstract": "A narrative overview of federated learning deployments across twelve hospital networks.",
+   "keywords": "",
+   "volume": "6",
+   "issue": "",
+   "pages": "199",
+   "publisher": "",
+   "url": "",
+   "type": "Review",
+   "dbSource": "PubMed",
+   "importBatch": "batch_mujvahic_m",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_q",
+   "title": "Digital identity verification for telehealth: a mixed-methods evaluation",
+   "authors": "Mockup F",
+   "year": "2022",
+   "journal": "Journal of Example Medical Informatics",
+   "doi": "10.1000/nbib.0004",
+   "abstract": "",
+   "keywords": "",
+   "volume": "24",
+   "issue": "6",
+   "pages": "e31111",
+   "publisher": "",
+   "url": "",
+   "type": "Journal Article",
+   "dbSource": "PubMed",
+   "importBatch": "batch_mujvahic_m",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "exclude",
+     "rev_b": "exclude"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "Not about detection or defence",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_u",
+   "title": "Adversarial robustness of intrusion detection models under distribution shift",
+   "authors": "Example A.; Sample B.",
+   "year": "2024",
+   "journal": "Journal of Example Security",
+   "doi": "10.1000/example.0001",
+   "abstract": "This paper studies the robustness of learned intrusion detectors when the traffic distribution drifts after deployment, and the \"defences\" that survive it.",
+   "keywords": "adversarial machine learning; intrusion detection",
+   "volume": "140",
+   "issue": "2",
+   "pages": "101",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": true,
+   "dupGroup": 1,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_v",
+   "title": "Federated learning for anomaly detection in industrial control systems: a comparative study",
+   "authors": "Placeholder C.",
+   "year": "2023",
+   "journal": "Transactions on Example Systems",
+   "doi": "10.1000/example.0002",
+   "abstract": "We compare federated and centralised training for anomaly detection on programmable logic controller telemetry.",
+   "keywords": "federated learning; anomaly detection",
+   "volume": "18",
+   "issue": "4",
+   "pages": "455",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": true,
+   "dupGroup": 2,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_w",
+   "title": "A comparative study of graph neural networks for anomaly detection in cloud workloads",
+   "authors": "Rossi L.",
+   "year": "2022",
+   "journal": "Example Access",
+   "doi": "10.1000/example.0009",
+   "abstract": "Abstract with, commas and\na newline inside the quoted field, as some database exports produce.",
+   "keywords": "graph neural networks; cloud security",
+   "volume": "10",
+   "issue": "",
+   "pages": "44100",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "include"
+    },
+    "abstract": {
+     "rev_a": "exclude"
+    },
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "No empirical evaluation",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_x",
+   "title": "Explainable artificial intelligence for security operations: A scoping review",
+   "authors": "Sample B.",
+   "year": "2022",
+   "journal": "Example Computing Surveys",
+   "doi": "10.1000/example.0004",
+   "abstract": "A scoping review of explanation methods applied to security analytics.",
+   "keywords": "explainable AI; scoping review",
+   "volume": "55",
+   "issue": "7",
+   "pages": "1",
+   "publisher": "",
+   "url": "",
+   "type": "Review",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": true,
+   "dupGroup": 4,
+   "dupScore": null,
+   "dupMethod": "doi",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_y",
+   "title": "Privacy-preserving analytics at the network edge under resource constraints",
+   "authors": "Demo G.; Example A.",
+   "year": "2021",
+   "journal": "Transactions on Example Systems",
+   "doi": "",
+   "abstract": "",
+   "keywords": "differential privacy; edge computing",
+   "volume": "16",
+   "issue": "3",
+   "pages": "210",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": true,
+   "dupGroup": 6,
+   "dupScore": 100,
+   "dupMethod": "title",
+   "decisions": {
+    "title": {},
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_z",
+   "title": "Malware classification with transfer learning on constrained devices",
+   "authors": "Stub H.",
+   "year": "2023",
+   "journal": "Example Letters on Embedded Security",
+   "doi": "10.1000/example.0010",
+   "abstract": "",
+   "keywords": "malware; transfer learning",
+   "volume": "8",
+   "issue": "4",
+   "pages": "60",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "include"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  },
+  {
+   "id": "rec_mujvahic_10",
+   "title": "Blockchain consensus under adversarial network partitions: a measurement study",
+   "authors": "Fictional D.",
+   "year": "2024",
+   "journal": "Journal of Example Distributed Systems",
+   "doi": "10.1000/example.0011",
+   "abstract": "We measure the safety and liveness of three consensus protocols under partition attacks.",
+   "keywords": "blockchain; consensus",
+   "volume": "31",
+   "issue": "2",
+   "pages": "150",
+   "publisher": "",
+   "url": "",
+   "type": "Article",
+   "dbSource": "Scopus",
+   "importBatch": "batch_mujvahic_t",
+   "importedAt": "2026-09-27T13:41:34.884Z",
+   "isDuplicate": false,
+   "dupGroup": null,
+   "dupScore": null,
+   "dupMethod": "",
+   "decisions": {
+    "title": {
+     "rev_a": "include",
+     "rev_b": "include"
+    },
+    "abstract": {},
+    "fulltext": {}
+   },
+   "resolved": {
+    "title": null,
+    "abstract": null,
+    "fulltext": null
+   },
+   "exclusionReason": {
+    "title": "",
+    "abstract": "",
+    "fulltext": ""
+   },
+   "studyId": null,
+   "notes": ""
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_mujvahia_c",
+   "name": "Web of Science",
+   "count": 6
+  },
+  {
+   "id": "src_mujvahib_k",
+   "name": "IEEE Xplore",
+   "count": 5
+  },
+  {
+   "id": "src_mujvahic_r",
+   "name": "PubMed",
+   "count": 4
+  },
+  {
+   "id": "src_mujvahic_11",
+   "name": "Scopus",
+   "count": 7
+  }
+ ],
+ "otherSources": [],
+ "reasons": [
+  {
+   "id": "rsn_mujvahii_1c",
+   "reason": "Not about detection or defence",
+   "count": 0
+  },
+  {
+   "id": "rsn_mujvahii_1d",
+   "reason": "No empirical evaluation",
+   "count": 0
+  }
+ ],
+ "searchRows": [
+  {
+   "id": "sr_mujvahii_16",
+   "db": "Scopus",
+   "query": "TITLE-ABS-KEY((\"intrusion detection\" OR \"anomaly detection\") AND (\"distribution shift\" OR adversarial OR robust*))",
+   "filters": "2015 to 2026; English",
+   "date": "2026-09-15",
+   "retrieved": 7,
+   "selected": 7
+  },
+  {
+   "id": "sr_mujvahii_17",
+   "db": "Web of Science",
+   "query": "TS=((\"intrusion detection\" OR \"anomaly detection\") AND (\"distribution shift\" OR adversarial OR robust*))",
+   "filters": "2015 to 2026",
+   "date": "2026-09-15",
+   "retrieved": 6,
+   "selected": 6
+  },
+  {
+   "id": "sr_mujvahii_18",
+   "db": "IEEE Xplore",
+   "query": "(\"intrusion detection\" OR \"anomaly detection\") AND (adversarial OR \"distribution shift\")",
+   "filters": "Journals and conferences",
+   "date": "2026-09-15",
+   "retrieved": 5,
+   "selected": 5
+  },
+  {
+   "id": "sr_mujvahii_19",
+   "db": "PubMed",
+   "query": "(intrusion detection[tiab] OR anomaly detection[tiab]) AND (adversarial[tiab] OR robust*[tiab])",
+   "filters": "none",
+   "date": "2026-09-15",
+   "retrieved": 4,
+   "selected": 4
+  }
+ ],
+ "prisma": {
+  "overrides": {},
+  "showOtherArm": false
+ },
+ "checklist": [
+  {
+   "id": "chk_1",
+   "section": "TITLE",
+   "no": "1",
+   "item": "Title",
+   "desc": "Identify the report as a systematic review.",
+   "done": true,
+   "na": false,
+   "location": "Title",
+   "note": ""
+  },
+  {
+   "id": "chk_2",
+   "section": "ABSTRACT",
+   "no": "2",
+   "item": "Abstract",
+   "desc": "See the PRISMA 2020 for Abstracts checklist.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_3",
+   "section": "INTRODUCTION",
+   "no": "3",
+   "item": "Rationale",
+   "desc": "Describe the rationale for the review in the context of existing knowledge.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_4",
+   "section": "INTRODUCTION",
+   "no": "4",
+   "item": "Objectives",
+   "desc": "Provide an explicit statement of the objective(s) or question(s) the review addresses.",
+   "done": true,
+   "na": false,
+   "location": "Section 1.2",
+   "note": ""
+  },
+  {
+   "id": "chk_5",
+   "section": "METHODS",
+   "no": "5",
+   "item": "Eligibility criteria",
+   "desc": "Specify the inclusion and exclusion criteria for the review and how studies were grouped for the syntheses.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_6",
+   "section": "METHODS",
+   "no": "6",
+   "item": "Information sources",
+   "desc": "Specify all databases, registers, websites, organisations, reference lists and other sources searched or consulted. Specify the date when each source was last searched or consulted.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_7",
+   "section": "METHODS",
+   "no": "7",
+   "item": "Search strategy",
+   "desc": "Present the full search strategies for all databases, registers and websites, including any filters and limits used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_8",
+   "section": "METHODS",
+   "no": "8",
+   "item": "Selection process",
+   "desc": "Specify the methods used to decide whether a study met the inclusion criteria, including how many reviewers screened each record and each report retrieved, whether they worked independently, and if applicable, details of automation tools used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_9",
+   "section": "METHODS",
+   "no": "9",
+   "item": "Data collection process",
+   "desc": "Specify the methods used to collect data from reports, including how many reviewers collected data from each report, whether they worked independently, any processes for obtaining or confirming data from investigators, and if applicable, details of automation tools used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_10a",
+   "section": "METHODS",
+   "no": "10a",
+   "item": "Data items — outcomes",
+   "desc": "List and define all outcomes for which data were sought. Specify whether all results compatible with each outcome domain in each study were sought, and if not, the methods used to decide which results to collect.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_10b",
+   "section": "METHODS",
+   "no": "10b",
+   "item": "Data items — other variables",
+   "desc": "List and define all other variables for which data were sought. Describe any assumptions made about missing or unclear information.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_11",
+   "section": "METHODS",
+   "no": "11",
+   "item": "Study risk of bias assessment",
+   "desc": "Specify the methods used to assess risk of bias in the included studies, including the tool(s) used, how many reviewers assessed each study, whether they worked independently, and if applicable, details of automation tools used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_12",
+   "section": "METHODS",
+   "no": "12",
+   "item": "Effect measures",
+   "desc": "Specify for each outcome the effect measure(s) used in the synthesis or presentation of results.",
+   "done": false,
+   "na": true,
+   "location": "",
+   "note": "Narrative synthesis; no pooled effect measure"
+  },
+  {
+   "id": "chk_13a",
+   "section": "METHODS",
+   "no": "13a",
+   "item": "Synthesis — eligibility",
+   "desc": "Describe the processes used to decide which studies were eligible for each synthesis.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_13b",
+   "section": "METHODS",
+   "no": "13b",
+   "item": "Synthesis — data preparation",
+   "desc": "Describe any methods required to prepare the data for presentation or synthesis.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_13c",
+   "section": "METHODS",
+   "no": "13c",
+   "item": "Synthesis — tabulation and display",
+   "desc": "Describe any methods used to tabulate or visually display results of individual studies and syntheses.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_13d",
+   "section": "METHODS",
+   "no": "13d",
+   "item": "Synthesis — methods",
+   "desc": "Describe any methods used to synthesise results and provide a rationale for the choice(s). If meta-analysis was performed, describe the model(s), the method(s) used to identify statistical heterogeneity, and the software packages used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_13e",
+   "section": "METHODS",
+   "no": "13e",
+   "item": "Synthesis — heterogeneity",
+   "desc": "Describe any methods used to explore possible causes of heterogeneity among study results.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_13f",
+   "section": "METHODS",
+   "no": "13f",
+   "item": "Synthesis — sensitivity analyses",
+   "desc": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_14",
+   "section": "METHODS",
+   "no": "14",
+   "item": "Reporting bias assessment",
+   "desc": "Describe any methods used to assess risk of bias due to missing results in a synthesis.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_15",
+   "section": "METHODS",
+   "no": "15",
+   "item": "Certainty assessment",
+   "desc": "Describe any methods used to assess certainty (or confidence) in the body of evidence for an outcome.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_16a",
+   "section": "RESULTS",
+   "no": "16a",
+   "item": "Study selection",
+   "desc": "Describe the results of the search and selection process, from the number of records identified to the number of studies included, ideally using a flow diagram.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_16b",
+   "section": "RESULTS",
+   "no": "16b",
+   "item": "Study selection — near misses",
+   "desc": "Cite studies that might appear to meet the inclusion criteria but were excluded, and explain why.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_17",
+   "section": "RESULTS",
+   "no": "17",
+   "item": "Study characteristics",
+   "desc": "Cite each included study and present its characteristics.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_18",
+   "section": "RESULTS",
+   "no": "18",
+   "item": "Risk of bias in studies",
+   "desc": "Present assessments of risk of bias for each included study.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_19",
+   "section": "RESULTS",
+   "no": "19",
+   "item": "Results of individual studies",
+   "desc": "For all outcomes, present for each study a summary of the data for each group and an effect estimate with its precision, ideally using structured tables or plots.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_20a",
+   "section": "RESULTS",
+   "no": "20a",
+   "item": "Results of syntheses — contributing studies",
+   "desc": "Briefly summarise the characteristics and risk of bias among contributing studies.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_20b",
+   "section": "RESULTS",
+   "no": "20b",
+   "item": "Results of syntheses — statistical results",
+   "desc": "Present results of all statistical syntheses conducted. If meta-analysis was done, present for each the summary estimate, its precision, and measures of statistical heterogeneity. If comparing groups, describe the direction of the effect.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_20c",
+   "section": "RESULTS",
+   "no": "20c",
+   "item": "Results of syntheses — heterogeneity",
+   "desc": "Present results of all investigations of possible causes of heterogeneity among study results.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_20d",
+   "section": "RESULTS",
+   "no": "20d",
+   "item": "Results of syntheses — sensitivity",
+   "desc": "Present results of all sensitivity analyses conducted to assess robustness of the synthesised results.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_21",
+   "section": "RESULTS",
+   "no": "21",
+   "item": "Reporting biases",
+   "desc": "Present assessments of risk of bias due to missing results for each synthesis assessed.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_22",
+   "section": "RESULTS",
+   "no": "22",
+   "item": "Certainty of evidence",
+   "desc": "Present assessments of certainty in the body of evidence for each outcome assessed.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_23a",
+   "section": "DISCUSSION",
+   "no": "23a",
+   "item": "Discussion — interpretation",
+   "desc": "Provide a general interpretation of the results in the context of other evidence.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_23b",
+   "section": "DISCUSSION",
+   "no": "23b",
+   "item": "Discussion — limitations of evidence",
+   "desc": "Discuss any limitations of the evidence included in the review.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_23c",
+   "section": "DISCUSSION",
+   "no": "23c",
+   "item": "Discussion — limitations of process",
+   "desc": "Discuss any limitations of the review processes used.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_23d",
+   "section": "DISCUSSION",
+   "no": "23d",
+   "item": "Discussion — implications",
+   "desc": "Discuss implications of the results for practice, policy and future research.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_24a",
+   "section": "OTHER",
+   "no": "24a",
+   "item": "Registration",
+   "desc": "Provide registration information for the review, including the register name and registration number, or state that the review was not registered.",
+   "done": true,
+   "na": false,
+   "location": "Section 2.1",
+   "note": ""
+  },
+  {
+   "id": "chk_24b",
+   "section": "OTHER",
+   "no": "24b",
+   "item": "Protocol",
+   "desc": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_24c",
+   "section": "OTHER",
+   "no": "24c",
+   "item": "Amendments",
+   "desc": "Describe and explain any amendments to information provided at registration or in the protocol.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_25",
+   "section": "OTHER",
+   "no": "25",
+   "item": "Support",
+   "desc": "Describe sources of financial or non-financial support for the review, and the role of the funders or sponsors.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_26",
+   "section": "OTHER",
+   "no": "26",
+   "item": "Competing interests",
+   "desc": "Declare any competing interests of review authors.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  },
+  {
+   "id": "chk_27",
+   "section": "OTHER",
+   "no": "27",
+   "item": "Availability of data, code and other materials",
+   "desc": "Report which of the following are publicly available and where: data collection forms; data extracted from included studies; data used for all analyses; analytic code; any other materials used in the review.",
+   "done": false,
+   "na": false,
+   "location": "",
+   "note": ""
+  }
+ ],
+ "audit": [
+  {
+   "id": "a_mujvahia_d",
+   "at": "2026-09-27T13:41:34.882Z",
+   "actor": "Reviewer A",
+   "action": "import",
+   "detail": "Imported 6 records from web_of_science.ris (RIS) attributed to Web of Science"
+  },
+  {
+   "id": "a_mujvahib_l",
+   "at": "2026-09-27T13:41:34.883Z",
+   "actor": "Reviewer A",
+   "action": "import",
+   "detail": "Imported 5 records from ieee_xplore.bib (BIBTEX) attributed to IEEE Xplore"
+  },
+  {
+   "id": "a_mujvahic_s",
+   "at": "2026-09-27T13:41:34.884Z",
+   "actor": "Reviewer A",
+   "action": "import",
+   "detail": "Imported 4 records from pubmed.nbib (NBIB) attributed to PubMed"
+  },
+  {
+   "id": "a_mujvahic_12",
+   "at": "2026-09-27T13:41:34.884Z",
+   "actor": "Reviewer A",
+   "action": "import",
+   "detail": "Imported 7 records from scopus_export.csv (CSV) attributed to Scopus"
+  },
+  {
+   "id": "a_mujvahig_13",
+   "at": "2026-09-27T13:41:34.888Z",
+   "actor": "Reviewer A",
+   "action": "dedup",
+   "detail": "Deduplication over 22 records using hybrid at 88% similarity, year tolerance ±1: 6 DOI matches, 2 title matches, 8 records flagged across 6 groups (largest group 4). 14 candidate pairs compared instead of 231 exhaustive comparisons; 0 merges refused as transitive chains (3 ms)."
+  },
+  {
+   "id": "a_mujvahih_14",
+   "at": "2026-09-27T13:41:34.889Z",
+   "actor": "Reviewer A",
+   "action": "screen",
+   "detail": "Title screening completed by both reviewers (sample project)"
+  },
+  {
+   "id": "a_mujvahii_15",
+   "at": "2026-09-27T13:41:34.890Z",
+   "actor": "Reviewer A",
+   "action": "resolve",
+   "detail": "Conflict at Title screening resolved as include by Reviewer A — Federated learning for anomaly detection in industrial control systems"
+  },
+  {
+   "id": "a_mujvahii_1b",
+   "at": "2026-09-27T13:41:34.890Z",
+   "actor": "Reviewer A",
+   "action": "prisma",
+   "detail": "Recalculated all PRISMA figures from the record set, discarding manual overrides for derivable fields"
+  }
+ ],
+ "settings": {
+  "dupThreshold": 88,
+  "dupStrategy": "hybrid",
+  "dupYearGuard": 1,
+  "autosave": true
+ },
+ "meta": {
+  "lastSavedAt": null,
+  "lastDedupAt": "2026-09-27T13:41:34.888Z"
+ }
+}
